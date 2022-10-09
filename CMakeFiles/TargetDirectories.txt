@@ -1,0 +1,5 @@
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/edit_cache.dir
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/test.dir
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/bag-tests.dir
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/rebuild_cache.dir
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/submission.dir

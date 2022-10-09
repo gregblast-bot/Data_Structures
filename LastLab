@@ -1,0 +1,121 @@
+#include "stm32l476xx.h"
+#include "RTC.h"
+#include "LCD.h"
+
+
+void SysTick_Handler(void);
+
+int main(void){
+
+  // Enable High Speed Internal Clock (HSI = 16 MHz)
+  RCC->CR |= ((uint32_t)RCC_CR_HSION);
+
+  // wait until HSI is ready
+  while ( (RCC->CR & (uint32_t) RCC_CR_HSIRDY) == 0 ) {;}
+
+  // Select HSI as system clock source 
+  RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+  RCC->CFGR |= (uint32_t)RCC_CFGR_SW_HSI;  //01: HSI16 oscillator used as system clock
+
+  // Wait till HSI is used as system clock source 
+  while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) == 0 ) {;}
+
+
+
+
+//USER CODE GOES HERE///////////////////////////
+  // Call functions to initialize the LCD and clock	
+  System_Clock_Init();
+  LCD_Initialization();
+  LCD_Clear();
+
+  // Initialize the clock for RTC
+  RTC_Clock_Init();
+
+  // Disable the write protection of RTC registers by writing disarm keys
+  // This can also be done with the following
+  // RTC->WPR = 0xCA;
+  // RTC->WPR = 0x53;
+  RTC_Disable_Write_Protection();
+
+  // Enter intialization mode in order to program TR and DR registers 
+  RTC->ISR |= RTC_ISR_INIT;
+
+  // Loop through until INITF has been set
+  while((RTC->ISR & RTC_ISR_INITF) == 0);
+
+  //RTC->CR &= ~RTC_CR_FMT;
+  // Set initiale time as 11:32:00
+  RTC->TR = 0U<<22 | 1U<<20 | 1U<<16 | 3U<<12 | 2U<<8;
+
+  // Exit initialization mode by clearing the init bit of the ISR register
+  RTC->ISR &= ~RTC_ISR_INIT;
+
+  // Enable write protection for RTC registers
+  // This can also be done with the following
+  // RTC->WPR = 0xFF;
+  RTC_Enable_Write_Protection();
+
+  // Disable the SysTick IRQ and the SysTick counter
+  SysTick->CTRL = 0;
+  // Set the reload register
+  SysTick->LOAD = 999;
+  // Reset the SysTick counter value
+  SysTick->VAL = 0;
+  
+  //SysTick->CTRL |= SysTick_CTRL_CLKSOURCE_Msk;
+  // Enable SysTick exception request
+  SysTick-> CTRL |= SysTick_CTRL_TICKINT_Msk;
+  // Enable Systick timer
+  SysTick-> CTRL |= SysTick_CTRL_ENABLE_Msk;
+
+////////////////////////////////////////////////
+  // Dead loop & program hangs here
+    while(1);
+}
+
+void SysTick_Handler(){
+    // Initialize data array with zeros
+    uint8_t data[] = "000000";
+    // Get the time
+    uint32_t time = RTC->TR;
+
+    // Do a logical bitwise operation to get the tens place of the hour register
+    uint8_t hourT = (RTC->TR >> 20) & 3;
+    // Add 48 to comply with ASCII
+    hourT = hourT + 48;
+    // Do a logical bitwise operation to get the ones place of the hour register
+    uint8_t hourU = (RTC->TR >> 16) & 15;
+    // Add 48 to comply with ASCII
+    hourU = hourU + 48;
+
+    // Do a logical bitwise operation to get the tens place of the minute register
+    uint8_t minT = (RTC->TR >> 12) & 7;
+    // Add 48 to comply with ASCII
+    minT = minT + 48;
+    // Do a logical bitwise operation to get the ones place of the minute register
+    uint8_t minU = (RTC->TR >> 8) & 15;
+    // Add 48 to comply with ASCII
+    minU = minU + 48;
+
+    // Do a logical bitwise operation to get the tens place of the seconds register
+    uint8_t secT = (RTC->TR >> 4) & 7;
+    // Add 48 to comply with ASCII
+    secT = secT + 48;
+    // Do a logical bitwise operation to get the ones place of the seconds register
+    uint8_t secU = RTC->TR & 15;
+    // Add 48 to comply with ASCII
+    secU = secU + 48;
+
+    // Set the respective indices to their time value
+    data[0] = hourT;
+    data[1] = hourU;
+    data[2] = minT;
+    data[3] = minU;
+    data[4] = secT;
+    data[5] = secU;
+
+    //RTC_Read_Time(hour, min, sec);
+    LCD_DisplayString(&data[0]);
+
+}

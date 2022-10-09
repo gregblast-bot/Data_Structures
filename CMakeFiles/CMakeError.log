@@ -1,0 +1,13 @@
+Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
+Change Dir: /home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7eb5d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7eb5d.dir/build.make CMakeFiles/cmTC_7eb5d.dir/build
+make[1]: Entering directory '/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/CMakeTmp'
+make[1]: *** No rule to make target '/home/tailor/Desktop/h00L/Data Structures and Algorithms/CMakeFiles/feature_tests.cxx', needed by 'CMakeFiles/cmTC_7eb5d.dir/feature_tests.cxx.o'.  Stop.
+make[1]: Leaving directory '/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7eb5d/fast' failed
+make: *** [cmTC_7eb5d/fast] Error 2
+
+
+
