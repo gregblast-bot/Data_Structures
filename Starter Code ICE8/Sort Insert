@@ -1,0 +1,43 @@
+ /*// Create a generic node pointer with dynamically allocated memory
+   // Make item an argument for it
+   Node<T>* node = new Node<T>(item);
+   Node<T>* tempNode = new Node<T>;
+   // Create a generic node pointer and set equal to head
+   tempNode = head;
+   
+   std::cout << *tempNode << std::endl;
+	
+	std::cout << tempNode << std::endl;
+	if (tempNode != nullptr)
+		std::cout << "Teeeeeeeeeeempnodddddddddddddddddde is not null" << std::endl;
+
+   
+   // If the position is 1 or the linked list does not have a head yet, fall into this case
+   if(tempNode == nullptr){
+		// We set the node to the head, then head equals node, increment length and return true
+		std::cout << "Heal = nullptr" << std::endl;
+		head = node;
+		length++;
+		//return true;
+   }
+   
+   else{
+	std::cout << "So.. head is not a null pointer" << std::endl;
+	  /* While looping through the linked list (starting from base 1)
+	   * continue to get the next entry until the postion before the desired 
+	   * position is reached. tempNode holds the next node.
+	   */
+	   while (tempNode->getNext() != nullptr && tempNode->getNext()->getItem() < item) {
+			tempNode = tempNode->getNext();
+		}
+
+      
+      // Finally, set node to the next tempNode (at your desired position)
+      node->setNext(tempNode->getNext());
+      
+      // And set tempNode to the node
+      tempNode->setNext(node);
+     
+      
+      length++;
+      } */

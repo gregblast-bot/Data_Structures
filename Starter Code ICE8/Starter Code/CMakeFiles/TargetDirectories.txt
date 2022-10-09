@@ -1,0 +1,4 @@
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE8/Starter Code/CMakeFiles/rebuild_cache.dir
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE8/Starter Code/CMakeFiles/edit_cache.dir
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE8/Starter Code/CMakeFiles/test_sorted_linked_list.dir
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE8/Starter Code/CMakeFiles/test.dir

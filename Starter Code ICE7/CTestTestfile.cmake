@@ -1,0 +1,36 @@
+# CMake generated Testfile for 
+# Source directory: /home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7
+# Build directory: /home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(test1 "/postpre" "ab+")
+set_tests_properties(test1 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\+)(a)(b)")
+add_test(test2 "/postpre" "ab-")
+set_tests_properties(test2 PROPERTIES  PASS_REGULAR_EXPRESSION "(-)(a)(b)")
+add_test(test3 "/postpre" "ab*")
+set_tests_properties(test3 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\*)(a)(b)")
+add_test(test4 "/postpre" "ab/")
+set_tests_properties(test4 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\/)(a)(b)")
+add_test(test5 "/postpre" "aA+")
+set_tests_properties(test5 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\+)(a)(A)")
+add_test(test6 "/postpre" "Xi+")
+set_tests_properties(test6 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\+)(X)(i)")
+add_test(test7 "/postpre" "RR+")
+set_tests_properties(test7 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\+)(R)(R)")
+add_test(test8 "/postpre" "qv+")
+set_tests_properties(test8 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\+)(q)(v)")
+add_test(test9 "/postpre" "AB*CD/+")
+set_tests_properties(test9 PROPERTIES  PASS_REGULAR_EXPRESSION "(\\+)(\\*)AB(\\/)CD")
+add_test(test10 "/postpre" "hr*Rf-+tg-ef/*-")
+set_tests_properties(test10 PROPERTIES  PASS_REGULAR_EXPRESSION "-(\\+)(\\*)hr-Rf(\\*)-tg(\\/)ef")
+add_test(test11 "/postpre" "hr*Rf-+tg-ef/*")
+set_tests_properties(test11 PROPERTIES  WILL_FAIL "true")
+add_test(test12 "/postpre" "hr**Rf-+tg-ef/-")
+set_tests_properties(test12 PROPERTIES  WILL_FAIL "true")
+add_test(test13 "/postpre" "hr*f-+tgef/*-")
+set_tests_properties(test13 PROPERTIES  WILL_FAIL "true")
+add_test(test14 "/postpre" "hr*Rf-tg-ef/*-h")
+set_tests_properties(test14 PROPERTIES  WILL_FAIL "true")
+add_test(test15 "/postpre" "h*R+f-tg-ef/*")
+set_tests_properties(test15 PROPERTIES  WILL_FAIL "true")

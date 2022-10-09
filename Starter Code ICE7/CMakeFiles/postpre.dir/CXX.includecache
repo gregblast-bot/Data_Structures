@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7/algebraic_expressions.cpp
+string
+-
+iostream
+-
+cctype
+-
+algebraic_expressions.hpp
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7/algebraic_expressions.hpp
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7/algebraic_expressions.hpp
+string
+-
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7/postpre.cpp
+algebraic_expressions.cpp
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7/algebraic_expressions.cpp
+cstdlib
+-
+iostream
+-
+string
+-
+algebraic_expressions.hpp
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE7/algebraic_expressions.hpp
+
