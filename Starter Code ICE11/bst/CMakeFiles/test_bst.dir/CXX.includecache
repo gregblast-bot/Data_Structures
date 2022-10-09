@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE11/bst/binary_search_tree.h
+stack
+-
+cassert
+-
+binary_search_tree.tpp
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE11/bst/binary_search_tree.tpp
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE11/bst/binary_search_tree.tpp
+binary_search_tree.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE11/bst/binary_search_tree.h
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE11/bst/test_bst.cpp
+cstdlib
+-
+iostream
+-
+binary_search_tree.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE11/bst/binary_search_tree.h
+

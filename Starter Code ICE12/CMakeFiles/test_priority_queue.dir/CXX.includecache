@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/abstract_list.h
+cstdlib
+-
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/abstract_priority_queue.h
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/dynamic_array_list.h
+abstract_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/abstract_list.h
+dynamic_array_list.tpp
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/dynamic_array_list.tpp
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/dynamic_array_list.tpp
+dynamic_array_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/dynamic_array_list.h
+algorithm
+-
+stdexcept
+-
+iostream
+-
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/heap_priority_queue.h
+abstract_priority_queue.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/abstract_priority_queue.h
+dynamic_array_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/dynamic_array_list.h
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/test_priority_queue.cpp
+cassert
+-
+dynamic_array_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/dynamic_array_list.h
+heap_priority_queue.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE12/heap_priority_queue.h
+
