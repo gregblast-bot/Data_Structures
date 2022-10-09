@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/abstract_list.h
+cstdlib
+-
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/abstract_sorted_list.h
+cstdlib
+-
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/dynamic_array_list.h
+abstract_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/abstract_list.h
+dynamic_array_list.tpp
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/dynamic_array_list.tpp
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/dynamic_array_list.tpp
+dynamic_array_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/dynamic_array_list.h
+algorithm
+-
+stdexcept
+-
+iostream
+-
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/sorted_list.h
+abstract_sorted_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/abstract_sorted_list.h
+sorted_list.tpp
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/sorted_list.tpp
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/sorted_list.tpp
+sorted_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/sorted_list.h
+
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/test_sorted_list.cpp
+dynamic_array_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/dynamic_array_list.h
+sorted_list.h
+/home/tailor/Desktop/$Ch00L/Data Structures and Algorithms/ICE/Starter Code ICE10/sorted_list.h
+iostream
+-
+assert.h
+-
+
